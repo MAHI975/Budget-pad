@@ -1,0 +1,302 @@
+/**********************************/
+/*ALL ELEMENTS*/
+/*********************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.right {float: right;}
+.flex {display: flex;}
+.blue {color: rgb(35, 218, 208) !important;}
+.red {color: rgb(172, 34, 34) !important;}
+.red__focus:focus {
+    border: solid 3px rgb(172, 34, 34) !important;
+}
+.red__hover:hover {
+    border: solid 3px rgb(172, 34, 34) !important;
+}
+
+/********************************/
+/*Top Part*/
+/*******************************/
+
+#top {
+    background-image: url("./download.jpg");
+
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 38vh;
+    color: white;
+}
+
+.budget {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.budget__title--month {
+    font-size: 35px;
+    font-family: 'Sansita Swashed', cursive;
+    padding-bottom: 10px;
+}
+
+.total__budget {
+font-size: 40px;
+font-family: 'Fredoka One', cursive;
+padding-bottom: 15px;
+}
+
+.budget__income, .budget__expense {
+    height: 50px;
+    width: 500px;
+
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    padding: 8px;
+}
+
+.budget__income {
+    background-color: #40ff809c;
+    margin-bottom: 20px;
+}
+
+.budget__expense {background-color: #ff4949af;}
+.budget__income--title, .budget__expense--title {float: left; text-transform: uppercase;}
+.budget__income--value, .budget__expense--value{padding-right: 20px;}
+
+.budget__income--percentage, .budget__expense--percentage {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 15px;
+    height: 23px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 0.493);
+}
+
+.budget__income--percentage {
+    visibility: hidden;
+    background: none !important; 
+}
+
+/*******************************/
+/*BOTTOM PART*/
+/******************************/
+
+
+/*User Input Section*/
+.UI {
+    height: 55px;
+    background-color: rgb(219, 219, 219);
+}
+
+.UI__container {text-align: center;}
+
+.UI__type {
+    width: 50px;
+    height: 30px;
+    padding-left: 8px;
+    margin: 10px;
+
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #FFF;
+    border-radius: 6px;
+    transition: width .2s ease-in, height .5s ease-in;
+}
+
+.UI__description, .UI__value {
+    height: 35px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid 1px #FFF;
+
+    font-size: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    transition: width .2s ease-in, height .5s ease-in;
+}
+
+.UI__description{width:450px;}
+.UI__value{width:120px;}
+
+.UI__icon {
+    font-size: 30px;
+    background: none;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+
+    color: rgb(35, 218, 208);
+    cursor: pointer;
+}
+
+.UI__type:focus,
+.UI__description:focus,
+.UI__value:focus {
+    outline: none;
+    border: solid 3px rgb(67, 242, 255);
+}
+
+.UI__icon:focus {
+    outline: none;
+}
+
+.UI__type:hover {
+    height: 32px;
+    width:55px;
+    border: solid 3px rgb(67, 242, 255);
+}
+.UI__description:hover {
+    height: 38px;
+    width: 455px;
+    border: solid 3px rgb(67, 242, 255);
+}
+.UI__value:hover {
+    height: 38px;
+    width: 125px;
+    border: solid 3px rgb(67, 242, 255);
+}
+.UI__icon:hover{
+    font-size: 35px;
+}
+
+.reload__icon {
+    font-weight: 600;
+    font-size: 30px;
+    background: none;
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    /* padding: 5px; */
+    margin-right: 20px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.reload__icon:hover{
+    font-size: 35px;
+    
+}
+
+/********** Income and Expenses List ************/
+.lists {
+    width: 100%;
+    text-align: center;
+}
+
+.lists__container {
+    width: 80%;
+    margin: 70px auto;
+}
+
+.income, .expense {
+    width: 45%;
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.income {margin-left: 0; margin-right: 10%;}
+.expense {margin-right: 0;}
+
+.income__title {
+    float: left;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+    color: rgb(35, 218, 208);
+    font-weight: 800;
+}
+
+.expense__title {
+    float: left;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+    color: rgb(172, 34, 34);
+    font-weight: 800;
+}
+
+.list__item {
+    width: 100%;
+    height: 50px;
+    border-top: solid .05px black;
+    border-bottom: solid .05px black;
+
+    font-size: 20px;
+}
+
+.item__description {
+    margin-top: 10px;
+    float: left;
+}
+
+.del__icon--btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.del__icon--btn:focus {
+    outline: none;
+}
+
+.list__item:hover .del__icon--btn {
+    display: flex;
+    transition: .2s ease-in;
+    margin-top: 10px;
+}
+
+.list__item:hover .item__value {
+
+    position: relative;
+    right: 10px;
+    transition: .2s ease-in;
+}
+
+.inc__right{
+    display: flex;
+}
+
+#inc-0 {
+    border-top: solid .2px black;
+}
+
+#exp-0 {
+    border-top: solid .2px black;
+}
+
+.item__percentage {
+    color: black;
+    margin-top: 10px;
+    background-color: rgba(255, 96, 96, 0.822);
+    font-size: 13px;
+    margin-left: 5px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.item__value {
+    margin-top: 10px;
+}
+
